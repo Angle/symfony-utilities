@@ -1,0 +1,54 @@
+{
+  "name": "anglemx/symfony-utilities",
+  "description": "Common Symfony Framework (PHP) utilities, functions & scripts used by Angle",
+  "type": "git",
+  "keywords": [
+    "angle",
+    "symfony",
+    "utilities"
+  ],
+  "homepage": "https://github.com/Angle/symfony-utilities",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Edmundo Fuentes",
+      "email": "me@edmundofuentes.com",
+      "homepage": "http://www.edmundofuentes.com",
+      "role": "creator,manager,architect,developer"
+    },
+    {
+      "name": "Alejandro Hernández Guerrero",
+      "email": "me@alexhdz.com",
+      "homepage": "http://www.alexhdz.com",
+      "role": "creator,manager,architect,developer"
+    },
+    {
+      "name": "Angle Consulting",
+      "email": "email@angle.mx",
+      "homepage": "http://www.angle.mx",
+      "role": "owner"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "ext-json": "*",
+    "ext-intl": "*",
+    "symfony/http-foundation": "^4.4.0",
+    "anglemx/php-utilities": "^1.0"
+  },
+  "suggest": {
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Angle\\SfUtilities\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Angle\\SfUtilities\\Tests\\": "tests"
+    }
+  }
+}
