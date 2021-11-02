@@ -19,6 +19,7 @@ class TwigExtension extends AbstractExtension
             new TwigFilter('ltrim', [$this, 'ltrim']),
             new TwigFilter('rtrim', [$this, 'rtrim']),
             new TwigFilter('wordwrap', [$this, 'wordwrap'], ['is_safe' => ['html']]),
+            new TwigFilter('truncate', [$this, 'truncate']),
             new TwigFilter('camel2snake', [$this, 'camelCaseToSnakeCase']),
             new TwigFilter('filesize', [$this, 'humanFileSize']),
         ];
@@ -94,6 +95,15 @@ class TwigExtension extends AbstractExtension
     public function wordwrap($str, $width=75, $break="<br/>", $cut=false)
     {
         return wordwrap($str, $width, $break, $cut);
+    }
+
+    public function truncate($str, $width=75, $trimmarker="…")
+    {
+        if (strlen($str) > $width) {
+            return substr($str, 0, $width) . $trimmarker;
+        } else {
+            return $str;
+        }
     }
 
     public function camelCaseToSnakeCase($input)
