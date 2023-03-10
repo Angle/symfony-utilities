@@ -33,6 +33,7 @@
     "php": ">=7.2",
     "ext-json": "*",
     "ext-intl": "*",
+    "ext-pcntl": "*",
     "symfony/http-foundation": "^4||^5",
     "symfony/twig-bundle": "^4||^5",
     "anglemx/php-utilities": "^1.0"
